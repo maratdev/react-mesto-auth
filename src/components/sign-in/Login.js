@@ -9,7 +9,9 @@ export default function Login ()  {
             <form className="login__form">
                 <input className="login__input" placeholder="Email" type="text" name="username" required/>
                 <input className="login__input" placeholder="Пароль" required name="password" type="password" />
-                <button type="button" className="login__btn">Войти</button>
+                <div className="login__form-wrap">
+                 <button type="button" className="login__btn">Войти</button>
+                </div>
             </form>
         </section>
         </main>

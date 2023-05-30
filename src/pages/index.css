@@ -24,6 +24,9 @@
 @import url(../blocks/login/__form/login__form.css);
 @import url(../blocks/login/__input/login__input.css);
 @import url(../blocks/login/__btn/login__btn.css);
+@import url(../blocks/login/__form-wrap/login__form-wrap.css);
+@import url(../blocks/login/__subtitle/login__subtitle.css);
+@import url(../blocks/login/__link/login__link.css);
 
 /*------------------------------------------------PROFILE*/
 @import url(../blocks/profile/profile.css);

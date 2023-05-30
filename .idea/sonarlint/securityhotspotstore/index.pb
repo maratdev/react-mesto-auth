@@ -23,12 +23,8 @@ T
 $src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
 N
 src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
-H
-src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 L
 src/blocks/header/header.css,9\1\91356074df5ec8cf824574ca994d27f5998987a8
-R
-"src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
 F
 src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
 J

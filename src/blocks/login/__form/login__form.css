@@ -1,6 +1,7 @@
 .login__form{
+
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height:max(50vh, 300px);
+    min-height:max(50vh, 350px);
 }
