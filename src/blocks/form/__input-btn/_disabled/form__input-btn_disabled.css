@@ -1,0 +1,10 @@
+.form__input-btn_disabled{
+  color: #000;
+  border: 1px solid #000000;
+  cursor: default;
+  background-color: #E5E5E5;
+  opacity: 0.2;
+}
+.form__input-btn_disabled:hover {
+  opacity: 0.2;
+}

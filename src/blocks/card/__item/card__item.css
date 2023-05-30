@@ -1,0 +1,9 @@
+.card__item{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 282px;
+  object-fit: cover;
+  cursor: pointer;
+  background-color: #000;
+}

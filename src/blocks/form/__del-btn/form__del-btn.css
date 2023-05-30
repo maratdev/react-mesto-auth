@@ -1,0 +1,4 @@
+.form__del-btn{
+  width: clamp(128px, 50vw, 358px);
+  max-width: 100%;
+}

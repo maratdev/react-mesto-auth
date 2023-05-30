@@ -1,0 +1,29 @@
+.profile__add-btn{
+  box-sizing: border-box;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  max-width: 150px;
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background: center url(../../../images/add-btn.svg) no-repeat;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.5s ease;
+}
+.profile__add-btn:hover{
+  opacity: 0.6;
+}
+
+@media (max-width: 425px) {
+  .profile__add-btn{
+    background-size: 16px 16px;
+    max-width: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    align-self: end;
+  }
+}
+

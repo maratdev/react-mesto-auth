@@ -1,0 +1,8 @@
+.form__span-error{
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #FF0000;
+  min-height: 46px;
+  margin: 0;
+}

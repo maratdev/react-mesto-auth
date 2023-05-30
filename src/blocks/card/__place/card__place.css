@@ -1,0 +1,6 @@
+.card__place{
+  display: flex;
+  flex-flow: column wrap;
+  width: 30px;
+  align-content: center;
+}
