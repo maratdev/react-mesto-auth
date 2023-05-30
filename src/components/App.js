@@ -1,7 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import Header from "./Header";
 import Main from "./Main";
-import Footer from "./Footer";
 import EditProfilePopup from "./EditProfilePopup";
 import AddCardPopup from "./AddCardPopup";
 import EditAvatarPopup from "./EditAvatarPopup";
@@ -9,8 +8,16 @@ import ImagePopup from "./ImagePopup";
 import ConfirmDeletePopup from './ConfirmDeletePopup'
 import api from "../utils/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
+// ---------------------------Роутинг-------------/
+import {Route, Routes, Navigate} from 'react-router-dom'; // импортируем Routes
+import Login from './sign-in/Login'
+import Register from './sign-up/Register'
+
 
 function App() {
+
+    const [loggedIn, setLoggedIn] = useState(false);
+
     // -------------------------------------------Попапы------------------------------------/
     // открытие попапа редактирования профиля
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -158,19 +165,27 @@ function App() {
     return (
       <>
         <CurrentUserContext.Provider value={currentUser}>
-            <Header/>
-            <Main
-                handleEditProfileClick={setIsEditProfilePopupOpen}
-                handleAddPlaceClick={setIsAddCardPopupOpen}
-                handleEditAvatarClick={setIsEditAvatarPopupOpen}
-                onCardLike={handleCardLike}
-                onCardDeleteClick={handleCardDeleteClick}
-                onCardClick={handleCardClick}
-                cards={cards}
+            <Header
+                loggedIn={loggedIn}
             />
-            <Footer
-                date = {new Date().getFullYear()}
-            />
+            <Routes>
+                <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
+
+                <Route path="/main" element={
+                    <Main
+                    handleEditProfileClick={setIsEditProfilePopupOpen}
+                    handleAddPlaceClick={setIsAddCardPopupOpen}
+                    handleEditAvatarClick={setIsEditAvatarPopupOpen}
+                    onCardLike={handleCardLike}
+                    onCardDeleteClick={handleCardDeleteClick}
+                    onCardClick={handleCardClick}
+                    cards={cards}
+                />
+                } />
+
+                <Route path="/signin" element={<Login/>} />
+                <Route path="/signup" element={<Register />} />
+            </Routes>
             {/*  Popup редактировать профиль*/}
             <EditProfilePopup
                 onUpdateUser={handleUpdateUser}

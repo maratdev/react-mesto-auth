@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import Card from "./Card";
 import { CurrentUserContext } from '../contexts/CurrentUserContext'
+import Footer from "./Footer";
 
 export default function Main(props) {
     const currentUser = useContext(CurrentUserContext);
     return (
+        <>
         <main>
             <section className="profile page__profile">
                 <button onClick={props.handleEditAvatarClick} className="profile__avatar-btn" type="button">
@@ -50,5 +52,10 @@ export default function Main(props) {
                 </ul>
             </section>
         </main>
+    <Footer
+        date = {new Date().getFullYear()}
+    />
+
+        </>
     )
 }
