@@ -1,13 +1,41 @@
-export default function Login ()  {
+import React, {useEffect, useState} from 'react';
+
+export default function Login ({handleAuthorizeUser})  {
+
+    const [formValue, setFormValue] = useState({
+        email: '',
+        password: '',
+    })
+
+    function handleChangeTooltip(evt){
+        const { name, value } = evt.target;
+        setFormValue({
+            ...formValue,
+            [name]: value
+        });
+    }
+
+    function handleSubmit(evt){
+        evt.preventDefault();
+        if(formValue.password && formValue.email){
+            handleAuthorizeUser({
+                password: formValue.password,
+                email: formValue.email
+            })
+        }
+    }
+
+
+
     return (
         <main>
         <section className="login">
             <h2 className="login__title">Вход</h2>
-            <form className="login__form">
-                <input className="login__input" placeholder="Email" type="text" name="username" required/>
-                <input className="login__input" placeholder="Пароль" required name="password" type="password" />
+            <form className="login__form" onSubmit={handleSubmit}>
+                <input className="login__input" placeholder="Email" type="email" name="email" value={formValue.email} onChange={handleChangeTooltip} required/>
+                <input className="login__input" placeholder="Пароль"  type="password" name="password" value={formValue.password} onChange={handleChangeTooltip} required />
                 <div className="login__form-wrap">
-                 <button type="button" className="login__btn">Войти</button>
+                 <button type="submit" className="login__btn" onSubmit={handleSubmit}>Войти</button>
                 </div>
             </form>
         </section>

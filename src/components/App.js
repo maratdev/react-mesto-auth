@@ -180,27 +180,51 @@ function App() {
             })
     }
 
-    // ---------------------------------------------------------> Открыте попап при успешной регистрации
-    function handleInfoTooltip(formValue) {
+    // ---------------------------------------------------------> Регистрация пользователя
+    function handleRegisterUser(formValue) {
         console.log(formValue)
+        const { password, email } = formValue;
+        auth.register(password, email)
+            .then((res) => {
+                console.log('handleRegisterUser' + res)
+                if(res.message || res.error){
+                    setInfoError(true)
+                    setInfoTooltip(true)
+                }else {
 
-            const { password, email } = formValue;
-            auth.register(password, email)
-                .then((res) => {
-               console.log(res.message)
-                    if(res.message){
-                        setInfoError(true)
-                        setInfoTooltip(true)
-                    }
-                setInfoTooltip(true)
-                    // navigate('/signin', {replace: true});
-                })
-                .catch(res => {
-                    console.log(res)
-                })
-
+                    setInfoTooltip(true)
+                    setInfoError(false)
+                    navigate('/signin', {replace: true});
+                    setTimeout(closeAllPopups, 2000);
+                }
+            })
+            .catch(res => {
+               // console.log(res)
+            })
     }
 
+    // ---------------------------------------------------------> Авторизация пользователя
+
+    function handleAuthorizeUser(formValue) {
+      // console.log(formValue)
+        const { password, email } = formValue;
+        auth.authorize(password, email)
+            .then((data) => {
+                //console.log(data)
+                if(data){
+                    // setLoggedIn(true);
+                   console.log()
+                }
+            })
+            .catch(res => {
+                // console.log(res)
+            })
+    }
+
+    const handleLogin = () => {
+       // setLoggedIn(true);
+    }
+    //console.log(loggedIn)
     return (
       <>
         <CurrentUserContext.Provider value={currentUser}>
@@ -210,8 +234,7 @@ function App() {
             <Routes>
                 <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
                 <Route path="/main" element={
-                    <ProtectedRouteElement element={
-                        <Main
+                    <ProtectedRouteElement element={Main}
                         handleEditProfileClick={setIsEditProfilePopupOpen}
                         handleAddPlaceClick={setIsAddCardPopupOpen}
                         handleEditAvatarClick={setIsEditAvatarPopupOpen}
@@ -219,13 +242,15 @@ function App() {
                         onCardDeleteClick={handleCardDeleteClick}
                         onCardClick={handleCardClick}
                         cards={cards}
-                    />}
-                loggedIn={loggedIn}/>} />
+                 loggedIn={loggedIn}/> } />
 
-                <Route path="/signin" element={<Login/>} />
+                <Route path="/signin" element={
+                    <Login
+                        handleAuthorizeUser={handleAuthorizeUser}
+                    />} />
                 <Route path="/signup" element={
                     <Register
-                        handleInfoTooltip={handleInfoTooltip}
+                        handleRegisterUser={handleRegisterUser}
                 />} />
                 <Route path="*" element={<NoFound />} />
             </Routes>
@@ -267,8 +292,8 @@ function App() {
             </ConfirmDeletePopup>
 
             <InfoTooltip
-                isInfoError={isInfoError}
                 isOpen={isInfoTooltip}
+                isInfoError={isInfoError}
                 onClose={closeAllPopups}
             >
             </InfoTooltip>
