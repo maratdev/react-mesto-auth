@@ -5,13 +5,19 @@ import EditProfilePopup from "./EditProfilePopup";
 import AddCardPopup from "./AddCardPopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import ImagePopup from "./ImagePopup";
+import NoFound from "./NoFound";
 import ConfirmDeletePopup from './ConfirmDeletePopup'
 import api from "../utils/Api";
+//---------------------HOC--------------------------------------------/
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import ProtectedRouteElement from "../hooks/ProtectedRoute";
+
 // ---------------------------Роутинг-------------/
 import {Route, Routes, Navigate} from 'react-router-dom'; // импортируем Routes
 import Login from './sign-in/Login'
 import Register from './sign-up/Register'
+
+
 
 
 function App() {
@@ -170,21 +176,22 @@ function App() {
             />
             <Routes>
                 <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
-
                 <Route path="/main" element={
-                    <Main
-                    handleEditProfileClick={setIsEditProfilePopupOpen}
-                    handleAddPlaceClick={setIsAddCardPopupOpen}
-                    handleEditAvatarClick={setIsEditAvatarPopupOpen}
-                    onCardLike={handleCardLike}
-                    onCardDeleteClick={handleCardDeleteClick}
-                    onCardClick={handleCardClick}
-                    cards={cards}
-                />
-                } />
+                    <ProtectedRouteElement element={
+                        <Main
+                        handleEditProfileClick={setIsEditProfilePopupOpen}
+                        handleAddPlaceClick={setIsAddCardPopupOpen}
+                        handleEditAvatarClick={setIsEditAvatarPopupOpen}
+                        onCardLike={handleCardLike}
+                        onCardDeleteClick={handleCardDeleteClick}
+                        onCardClick={handleCardClick}
+                        cards={cards}
+                    />}
+                loggedIn={loggedIn}/>} />
 
                 <Route path="/signin" element={<Login/>} />
                 <Route path="/signup" element={<Register />} />
+                <Route path="*" element={<NoFound />} />
             </Routes>
             {/*  Popup редактировать профиль*/}
             <EditProfilePopup

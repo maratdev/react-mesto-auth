@@ -17,8 +17,6 @@ L
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
-<
-src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 T
 $src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
 N
@@ -29,3 +27,17 @@ F
 src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
 J
 src/vendor/fonts/fonts.css,9\5\95a76dd83fbb686bb9b8e84c044f9a5b2c486a21
+Y
+)src/blocks/login/__title/login__title.css,d\5\d549d249c42a4b812369c3fbdf95212bdeca4197
+Y
+)src/blocks/login/__input/login__input.css,8\d\8d8ad4f9620cd3718e0049221890b5264d2754a7
+J
+src/blocks/login/login.css,9\3\938bd89551a19465e036a6e850eda7f808e0b524
+U
+%src/blocks/menu/__link/menu__link.css,5\8\5838b068f7908c64d808c66315d944b3003aa8fa
+_
+/src/blocks/login/__subtitle/login__subtitle.css,6\6\666076260749def02f9f1cf8cfe203f5ee0dfc06
+U
+%src/blocks/login/__btn/login__btn.css,d\1\d1306fb5e2239082beeeccdaace3222415a8bb10
+W
+'src/blocks/login/__form/login__form.css,2\c\2ccb6f2f7411d6f7365b682dc38cdd6f36adb929
