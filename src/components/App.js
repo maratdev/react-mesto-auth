@@ -13,10 +13,11 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import ProtectedRouteElement from "../hooks/ProtectedRoute";
 
 // ---------------------------Роутинг-------------/
-import {Route, Routes, Navigate} from 'react-router-dom'; // импортируем Routes
+import {Route, Routes, Navigate, useNavigate} from 'react-router-dom'; // импортируем Routes
 import Login from './sign-in/Login'
 import Register from './sign-up/Register'
 import InfoTooltip from "./InfoTooltip";
+import * as auth from "../utils/auth";
 
 
 
@@ -38,8 +39,11 @@ function App() {
     const [selectedCard, setSelectedCard] = useState(false);
     // открытие попап карточки на весь экран
     const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+
     // открытие попап карточки об успешной регистрации
     const [isInfoTooltip, setInfoTooltip] = useState(false);
+    const [isInfoError, setInfoError] = useState(false);
+    const navigate = useNavigate();
 
     // Контекст текущего пользователя
     const [currentUser, setCurrentUser] = useState({});
@@ -106,6 +110,9 @@ function App() {
         setIsImagePopupOpen(true);
         setSelectedCard(card);
     }
+
+
+
     // Api---------------------------------------------------------> Like
     function handleCardLike(cardId, likes) {
         const isLiked = likes.some((i) => i._id === currentUser._id);
@@ -173,6 +180,27 @@ function App() {
             })
     }
 
+    // ---------------------------------------------------------> Открыте попап при успешной регистрации
+    function handleInfoTooltip(formValue) {
+        console.log(formValue)
+
+            const { password, email } = formValue;
+            auth.register(password, email)
+                .then((res) => {
+               console.log(res.message)
+                    if(res.message){
+                        setInfoError(true)
+                        setInfoTooltip(true)
+                    }
+                setInfoTooltip(true)
+                    // navigate('/signin', {replace: true});
+                })
+                .catch(res => {
+                    console.log(res)
+                })
+
+    }
+
     return (
       <>
         <CurrentUserContext.Provider value={currentUser}>
@@ -195,7 +223,10 @@ function App() {
                 loggedIn={loggedIn}/>} />
 
                 <Route path="/signin" element={<Login/>} />
-                <Route path="/signup" element={<Register />} />
+                <Route path="/signup" element={
+                    <Register
+                        handleInfoTooltip={handleInfoTooltip}
+                />} />
                 <Route path="*" element={<NoFound />} />
             </Routes>
             {/*  Popup редактировать профиль*/}
@@ -236,6 +267,7 @@ function App() {
             </ConfirmDeletePopup>
 
             <InfoTooltip
+                isInfoError={isInfoError}
                 isOpen={isInfoTooltip}
                 onClose={closeAllPopups}
             >
