@@ -16,6 +16,7 @@ import ProtectedRouteElement from "../hooks/ProtectedRoute";
 import {Route, Routes, Navigate} from 'react-router-dom'; // импортируем Routes
 import Login from './sign-in/Login'
 import Register from './sign-up/Register'
+import InfoTooltip from "./InfoTooltip";
 
 
 
@@ -37,6 +38,9 @@ function App() {
     const [selectedCard, setSelectedCard] = useState(false);
     // открытие попап карточки на весь экран
     const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+    // открытие попап карточки об успешной регистрации
+    const [isInfoTooltip, setInfoTooltip] = useState(false);
+
     // Контекст текущего пользователя
     const [currentUser, setCurrentUser] = useState({});
 
@@ -45,7 +49,7 @@ function App() {
     // рендер текста для кнопкок формы после нажатия на сабмит
     const [isLoading, setIsLoading] = React.useState(false);
 
-    const handlePopup = isEditProfilePopupOpen || isAddCardPopupOpen || isEditAvatarPopupOpen || isImagePopupOpen || isConfirmDelCardPopupOpen
+    const handlePopup = isEditProfilePopupOpen || isAddCardPopupOpen || isEditAvatarPopupOpen || isImagePopupOpen || isConfirmDelCardPopupOpen || isInfoTooltip
 
     function closeAllPopups() {
         setIsEditProfilePopupOpen(false);
@@ -53,6 +57,7 @@ function App() {
         setIsEditAvatarPopupOpen(false);
         setIsConfirmDelCardPopupOpen(false);
         setIsImagePopupOpen(false);
+        setInfoTooltip(false)
     }
 
     // ----------------------------------------------------Попап закрытие по ESC и оверлею
@@ -229,6 +234,12 @@ function App() {
               isLoading={isLoading}
             >
             </ConfirmDeletePopup>
+
+            <InfoTooltip
+                isOpen={isInfoTooltip}
+                onClose={closeAllPopups}
+            >
+            </InfoTooltip>
 
         </CurrentUserContext.Provider>
       </>

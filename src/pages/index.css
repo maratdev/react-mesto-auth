@@ -103,6 +103,7 @@
 @import url(../blocks/popup/__zoom-image/popup__zoom-image.css);
 /*------------div.popup_img-card --> div --> h3 */
 @import url(../blocks/popup/__zoom-title/popup__zoom-title.css);
+@import url(../blocks/popup/__img/popup__img.css);
 
 /*------------------------------------------------FORM */
 /*------------div.popup --> form */

@@ -17,8 +17,6 @@ L
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
-T
-$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
 N
 src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
 L
