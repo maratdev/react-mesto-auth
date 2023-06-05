@@ -208,11 +208,10 @@ function App() {
         const { password, email } = formValue;
         auth.register(password, email)
             .then((res) => {
-                console.log(res)
                 if(res.message || res.error){
                     setInfoError(true)
                     setInfoTooltip(true)
-                    setInfoErrorTxt(res.error)
+                    setInfoErrorTxt(res.error || res.message)
                 }else {
                     setInfoTooltip(true)
                     setInfoError(false)
