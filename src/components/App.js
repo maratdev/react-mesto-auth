@@ -41,9 +41,10 @@ function App() {
     const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
 
     // открытие попап карточки об успешной регистрации
-    const [isInfoTooltip, setInfoTooltip] = useState(false);
-    const [isInfoError, setInfoError] = useState(false);
-    const [isInfoErrorTxt, setInfoErrorTxt] = useState('');
+    const [isInfoTooltip, setInfoTooltip] = useState(false); //+
+
+    const [tooltip, setTooltip] = React.useState({ image: "", message: "" });
+
     const navigate = useNavigate();
 
     // данные пользователя email и password с сервера
@@ -209,38 +210,58 @@ function App() {
         auth.register(password, email)
             .then((res) => {
                 if(res.message || res.error){
-                    setInfoError(true)
                     setInfoTooltip(true)
-                    setInfoErrorTxt(res.error || res.message)
+                    setTooltip({
+                        image: false,
+                        message: res.error || res.message,
+                    });
                 }else {
                     setInfoTooltip(true)
-                    setInfoError(false)
+                    setTooltip({
+                        image: true,
+                        message: "Вы успешно зарегистрировались!",
+                    });
                     navigate('/signin', {replace: true});
                     setTimeout(closeAllPopups, 2000);
                 }
             })
-            .catch((err) => console.log(err)
-            )
+            .catch((res) => {
+                setTooltip({
+                    image: false,
+                    message: "Что-то пошло не так! Попробуйте ещё раз.",
+                });
+                console.log(res)
+            });
     }
 
     // ---------------------------------------------------------> Авторизация пользователя
 
     function handleAuthorizeUser(formValue) {
-      // console.log(formValue)
         const { password, email } = formValue;
         auth.authorize(password, email)
+            .then((response => response.json()))
             .then((data) => {
-                //console.log(data)
                 if (data.token){
                     setUserData({email})
                     localStorage.setItem('jwt', data.token);
                     setLoggedIn(true);
                     navigate('/app', {replace: true});
-
+                } else if (data.status === 401 || data.message){
+                    setInfoTooltip(true)
+                    setTooltip({
+                        image: false,
+                        message: 'Неверный адрес электронной почты или пароль!',
+                    });
                 }
             })
-            .catch(err => console.log(err)
-            )
+            .catch((res) => {
+                setTooltip({
+                    image: false,
+                    message: "Что-то пошло не так! Попробуйте ещё раз.",
+                });
+                console.log(res)
+            });
+
     }
 
     // ---------------------------------------------------------> Выход
@@ -323,9 +344,8 @@ function App() {
             </ConfirmDeletePopup>
 
             <InfoTooltip
-                isInfoErrorTxt={isInfoErrorTxt}
+                tooltip={tooltip}
                 isOpen={isInfoTooltip}
-                isInfoError={isInfoError}
                 onClose={closeAllPopups}
             >
             </InfoTooltip>
