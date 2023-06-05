@@ -7,7 +7,7 @@ export default function NoFound()  {
         return (
             <div>
                 <h1 style={{textAlign: "center"}}>Ooops! Ничего не найдено.</h1>
-                    <p style={{textAlign: "center"}}><Link to={goBack} onClick={goBack}  className="login__link" >Назад!</Link></p>
+                    <p style={{textAlign: "center"}}><Link to={goBack} onClick={goBack}  className="login__link" >Назад ⮌</Link></p>
             </div>
         );
 

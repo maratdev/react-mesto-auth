@@ -1,5 +1,19 @@
 export const BASE_URL = 'https://auth.nomoreparties.co/';
 
+
+export const getContent = (jwt) => {
+    // console.log(password, email)
+    return fetch(`${BASE_URL}users/me`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Authorization" : `Bearer ${jwt}`
+        },
+    })
+        .then((res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`))
+};
+
 export const register = (password, email) => {
     return fetch(`${BASE_URL}signup`, {
         method: 'POST',
@@ -9,14 +23,8 @@ export const register = (password, email) => {
         },
         body: JSON.stringify({password, email})
     })
-        .then((response) => {
-            return response.json();
-        })
-        .then((res) => {
-           //console.log(res)
-            return res;
-        })
-        .catch((err) => console.log(err));
+        .then((res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`))
+
 };
 
 export const authorize = (password, email) => {
@@ -29,13 +37,6 @@ export const authorize = (password, email) => {
         },
         body: JSON.stringify({password, email})
     })
-        .then((response => response.json()))
-        .then((data) => {
-            //console.log(data.token)
-            if (data.token){
-                localStorage.setItem('jwt', data.token);
-                return data;
-            }
-        })
-        .catch(err => console.log(err))
+        .then((res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`))
 };
+

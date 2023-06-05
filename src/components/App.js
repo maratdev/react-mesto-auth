@@ -10,9 +10,9 @@ import ConfirmDeletePopup from './ConfirmDeletePopup'
 import api from "../utils/Api";
 //---------------------HOC--------------------------------------------/
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import ProtectedRouteElement from "../hooks/ProtectedRoute";
+import { ProtectedRouteElement } from "../hooks/ProtectedRoute";
 
-// ---------------------------Роутинг-------------/
+// ---------------------------Роутинг--------------------------------------/
 import {Route, Routes, Navigate, useNavigate} from 'react-router-dom'; // импортируем Routes
 import Login from './sign-in/Login'
 import Register from './sign-up/Register'
@@ -43,7 +43,11 @@ function App() {
     // открытие попап карточки об успешной регистрации
     const [isInfoTooltip, setInfoTooltip] = useState(false);
     const [isInfoError, setInfoError] = useState(false);
+    const [isInfoErrorTxt, setInfoErrorTxt] = useState('');
     const navigate = useNavigate();
+
+    // данные пользователя email и password с сервера
+    const [userData, setUserData] = useState({email: ''});
 
     // Контекст текущего пользователя
     const [currentUser, setCurrentUser] = useState({});
@@ -51,7 +55,7 @@ function App() {
     const [cards, setCards] = useState([]);
     const [cardId, setCardId] = useState('');
     // рендер текста для кнопкок формы после нажатия на сабмит
-    const [isLoading, setIsLoading] = React.useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handlePopup = isEditProfilePopupOpen || isAddCardPopupOpen || isEditAvatarPopupOpen || isImagePopupOpen || isConfirmDelCardPopupOpen || isInfoTooltip
 
@@ -141,7 +145,6 @@ function App() {
 
     // Api---------------------------------------------------------> Изменение данных пользователя
     function handleUpdateUser(userData) {
-        console.log(userData)
         setIsLoading(true);
         api.saveDataInfo(userData)
             .then((updateUser) => {
@@ -180,27 +183,45 @@ function App() {
             })
     }
 
+    // ---------------------------------------------------------> Аутинфикация пользоватедя
+    function tokenCheck(){
+        const jwt = localStorage.getItem('jwt')
+        if (jwt){
+            auth.getContent(jwt)
+                .then(({data}) => {
+                    navigate('/app');
+                    setLoggedIn(true);
+                    setUserData({email: data.email})
+
+                })
+                .catch(err => console.log(err))
+        }
+    }
+    useEffect(()=> {
+        tokenCheck()
+    },[])
+
+
     // ---------------------------------------------------------> Регистрация пользователя
     function handleRegisterUser(formValue) {
-        console.log(formValue)
+        //console.log(formValue)
         const { password, email } = formValue;
         auth.register(password, email)
             .then((res) => {
-                console.log('handleRegisterUser' + res)
+                console.log(res)
                 if(res.message || res.error){
                     setInfoError(true)
                     setInfoTooltip(true)
+                    setInfoErrorTxt(res.error)
                 }else {
-
                     setInfoTooltip(true)
                     setInfoError(false)
                     navigate('/signin', {replace: true});
                     setTimeout(closeAllPopups, 2000);
                 }
             })
-            .catch(res => {
-               // console.log(res)
-            })
+            .catch((err) => console.log(err)
+            )
     }
 
     // ---------------------------------------------------------> Авторизация пользователя
@@ -211,29 +232,40 @@ function App() {
         auth.authorize(password, email)
             .then((data) => {
                 //console.log(data)
-                if(data){
-                    // setLoggedIn(true);
-                   console.log()
+                if (data.token){
+                    setUserData({email})
+                    localStorage.setItem('jwt', data.token);
+                    setLoggedIn(true);
+                    navigate('/app', {replace: true});
+
                 }
             })
-            .catch(res => {
-                // console.log(res)
-            })
+            .catch(err => console.log(err)
+            )
     }
 
-    const handleLogin = () => {
-       // setLoggedIn(true);
+    // ---------------------------------------------------------> Выход
+
+    function signOut() {
+        setUserData({email: ''})
+        localStorage.removeItem('jwt');
+        navigate('/signin', {replace: true});
     }
-    //console.log(loggedIn)
+
+
+   // console.log(userData)
+
     return (
       <>
         <CurrentUserContext.Provider value={currentUser}>
             <Header
                 loggedIn={loggedIn}
+                userData={userData}
+                signOut={signOut}
             />
             <Routes>
-                <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
-                <Route path="/main" element={
+                <Route path="/" element={loggedIn ? <Navigate to="app" replace/> : <Navigate to="/signin" replace />} />
+                <Route path="app" element={
                     <ProtectedRouteElement element={Main}
                         handleEditProfileClick={setIsEditProfilePopupOpen}
                         handleAddPlaceClick={setIsAddCardPopupOpen}
@@ -292,6 +324,7 @@ function App() {
             </ConfirmDeletePopup>
 
             <InfoTooltip
+                isInfoErrorTxt={isInfoErrorTxt}
                 isOpen={isInfoTooltip}
                 isInfoError={isInfoError}
                 onClose={closeAllPopups}

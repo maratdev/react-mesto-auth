@@ -1,7 +1,7 @@
 import img from '../images/tooltip.svg';
 import img_error from '../images/tooltip_error.svg';
 
-export default function InfoTooltip({ onClose, isOpen, isInfoError} ) {
+export default function InfoTooltip({ onClose, isOpen, isInfoError, isInfoErrorTxt} ) {
     return (
         <div className={`popup popup_tooltip ${isOpen ? 'popup_opened' : ''}`}>
             <div className="popup__container">
@@ -16,7 +16,7 @@ export default function InfoTooltip({ onClose, isOpen, isInfoError} ) {
                     src={!isInfoError ? img : img_error}
                     alt={!isInfoError ? `иконка успех регистрации` : `иконка ошибки регистрации`}
                 />
-                <h3 className="popup__title">{!isInfoError ? 'Вы успешно зарегистрировались!' : 'Что-то пошло не так! Попробуйте ещё раз.'}</h3>
+                <h3 className="popup__title">{!isInfoError ? 'Вы успешно зарегистрировались!' : isInfoErrorTxt}</h3>
 
             </div>
         </div>

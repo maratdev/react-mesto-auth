@@ -1,7 +1,8 @@
 import logo from '../images/logo.svg';
 import NavBar from "./NavBar";
 
-export default function Header({ loggedIn }) {
+export default function Header({loggedIn, userData, signOut} ) {
+   // console.log(userData)
     return (
         <header className="header page__header">
             <img
@@ -10,7 +11,11 @@ export default function Header({ loggedIn }) {
                 alt="логотип Mesto"
             />
             {
-                !loggedIn &&   <NavBar/>
+               <NavBar
+                signOut={signOut}
+                loggedIn={loggedIn}
+                userData={userData}
+               />
             }
 
         </header>
