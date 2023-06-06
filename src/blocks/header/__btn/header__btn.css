@@ -1,0 +1,11 @@
+.header__btn{
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 424px) {
+    .header__btn{
+        display: block;
+    }
+
+}

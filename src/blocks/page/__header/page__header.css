@@ -2,8 +2,10 @@
   margin-top: 45px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 424px) {
   .page__header{
+    flex-flow: column-reverse;
+    align-items: normal;
     margin-top: 28px;
   }
 }

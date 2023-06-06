@@ -5,3 +5,9 @@
     text-align: center;
     margin:0 0 50px;
 }
+
+@media (max-width: 425px) {
+    .login__title{
+        font-size: 1.25rem;
+    }
+}

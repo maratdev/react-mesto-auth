@@ -3,3 +3,9 @@
     margin: 60px auto 0;
     max-width: 358px;
 }
+
+@media (max-width: 425px) {
+    .login{
+        max-width: calc(100% - 30px * 2);
+    }
+}

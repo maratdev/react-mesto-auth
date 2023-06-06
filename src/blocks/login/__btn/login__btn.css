@@ -9,3 +9,10 @@
 .login__btn:hover{
     opacity: 0.8;
 }
+
+@media (max-width: 425px) {
+    .login__btn{
+        font-size: 1rem;
+    }
+}
+

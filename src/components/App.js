@@ -21,7 +21,6 @@ import * as auth from "../utils/auth";
 
 
 
-
 function App() {
 
     const [loggedIn, setLoggedIn] = useState(false);
@@ -270,10 +269,9 @@ function App() {
         setUserData({email: ''})
         localStorage.removeItem('jwt');
         navigate('/signin', {replace: true});
+        setLoggedIn(false);
     }
 
-
-   // console.log(userData)
 
     return (
       <>

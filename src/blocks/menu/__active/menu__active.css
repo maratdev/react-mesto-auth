@@ -1,0 +1,5 @@
+.menu__active{
+    top: -25px;
+    transition: .5s;
+    position: relative;
+}
