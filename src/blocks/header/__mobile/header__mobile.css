@@ -1,5 +1,5 @@
 @media (max-width: 425px) {
-    .header__mobile{
-        flex-flow: row;
-    }
+  .header__mobile {
+    flex-flow: row;
+  }
 }

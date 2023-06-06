@@ -1,6 +1,6 @@
-.form__input-btn{
+.form__input-btn {
   max-width: 100%;
-  width: clamp(128px,50vw,358px);
+  width: clamp(128px, 50vw, 358px);
   padding: 14px 0 15px;
   background-color: #000;
   color: #fff;
@@ -13,12 +13,12 @@
   border-radius: 2px;
   transition: all 0.5s ease;
 }
-.form__input-btn:hover{
+.form__input-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 425px) {
-  .form__input-btn{
+  .form__input-btn {
     font-size: 0.875rem;
     padding: 14px 0 14px;
     width: 100%;

@@ -1,4 +1,4 @@
-.profile__avatar{
+.profile__avatar {
   display: block;
   position: absolute;
   top: 0;
@@ -10,5 +10,3 @@
   height: 120px;
   object-fit: cover;
 }
-
-

@@ -1,11 +1,11 @@
-.menu__items{
-    display: flex;
-    align-items: center;
+.menu__items {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 424px) {
-    .menu__items{
-        display: block;
-        text-align: center;
-    }
+  .menu__items {
+    display: block;
+    text-align: center;
+  }
 }

@@ -1,15 +1,11 @@
-.elements{
+.elements {
   box-sizing: border-box;
   max-width: 880px;
   margin: 0 auto;
 }
 
 @media (max-width: 991px) {
-  .elements{
+  .elements {
     max-width: calc(100% - 19px * 2);
   }
 }
-
-
-
-

@@ -1,4 +1,4 @@
-.popup__container{
+.popup__container {
   position: relative;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
@@ -9,13 +9,12 @@
 }
 
 @media (max-width: 768px) {
-  .popup__container{
+  .popup__container {
     max-width: 282px;
   }
 }
 @media (max-width: 425px) {
-  .popup__container{
+  .popup__container {
     padding: 25px 22px 25px;
   }
 }
-

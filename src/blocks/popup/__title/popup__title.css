@@ -1,4 +1,4 @@
-.popup__title{
+.popup__title {
   text-align: center;
   margin: 0;
   font-weight: 900;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 425px) {
-  .popup__title{
+  .popup__title {
     font-size: 1.125rem;
   }
 }

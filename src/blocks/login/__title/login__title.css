@@ -1,13 +1,13 @@
-.login__title{
-    font-weight: 900;
-    font-size: 1.5rem;
-    line-height: normal;
-    text-align: center;
-    margin:0 0 50px;
+.login__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: normal;
+  text-align: center;
+  margin: 0 0 50px;
 }
 
 @media (max-width: 425px) {
-    .login__title{
-        font-size: 1.25rem;
-    }
+  .login__title {
+    font-size: 1.25rem;
+  }
 }

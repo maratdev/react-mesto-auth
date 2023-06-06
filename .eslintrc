@@ -1,0 +1,10 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "quotes": ["warn", "double"],
+    "jsx-quotes": ["warn", "prefer-double"],
+    "prefer-const": "warn"
+  }
+}

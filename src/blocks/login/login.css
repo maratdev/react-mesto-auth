@@ -1,11 +1,11 @@
-.login{
-    /*outline: 1px solid red;*/
-    margin: 60px auto 0;
-    max-width: 358px;
+.login {
+  /*outline: 1px solid red;*/
+  margin: 60px auto 0;
+  max-width: 358px;
 }
 
 @media (max-width: 425px) {
-    .login{
-        max-width: calc(100% - 30px * 2);
-    }
+  .login {
+    max-width: calc(100% - 30px * 2);
+  }
 }

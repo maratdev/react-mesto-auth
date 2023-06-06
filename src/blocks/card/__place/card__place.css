@@ -1,4 +1,4 @@
-.card__place{
+.card__place {
   display: flex;
   flex-flow: column wrap;
   width: 30px;

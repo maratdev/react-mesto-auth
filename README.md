@@ -3,6 +3,7 @@
 ### _**Проектная работа №12. Курс «Веб-разработчик» от Яндекс Практикум.**_
 
 ## ⚙️ Функционал:
+
 - [x] Резиновая и адаптивная вёрстка
 - [x] Animation and Transform
 - [x] Оптимизация шрифтов
@@ -42,22 +43,26 @@
 - Webpack
 - NPM
 
-* * *
+---
 
 **🧩 Брифы:**
-* [Figma 11-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
+
+- [Figma 11-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
 
 **📄 Чеклисты:**
-* [Чеклист 11-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-11.pdf)
+
+- [Чеклист 11-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-11.pdf)
 
 **🌐 Проект на GitHub Pages:**
-* [gh-pages](https://maratdev.github.io/mesto-react/)
 
-* * *
+- [gh-pages](https://maratdev.github.io/mesto-react/)
+
+---
 
 #### Установка и запуск приложения на локальной машине:
 
 Склонировано из репозитория:
+
 ```bash
 git clone https://github.com/yandex-praktikum/mesto-react
 ```
@@ -65,5 +70,6 @@ git clone https://github.com/yandex-praktikum/mesto-react
 👤 **Автор**
 
 **_Marat Zakar_**
+
 - Telegram: [@voredev](https://t.me/voredev)
 - GitHub: [@maratdev](https://github.com/maratdev)

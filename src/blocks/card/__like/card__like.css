@@ -1,4 +1,4 @@
-.card__like{
+.card__like {
   border: 0;
   outline: 0;
   min-height: 19px;
@@ -10,8 +10,6 @@
   transition: opacity 0.5s ease;
 }
 
-.card__like:hover{
+.card__like:hover {
   opacity: 0.5;
 }
-
-

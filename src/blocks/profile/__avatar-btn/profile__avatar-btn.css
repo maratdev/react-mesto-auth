@@ -1,4 +1,4 @@
-.profile__avatar-btn{
+.profile__avatar-btn {
   outline: none;
   border: none;
   position: relative;
@@ -21,9 +21,8 @@
   transition: all 0.3s ease;
 }
 
-.profile__avatar-btn:hover::after{
+.profile__avatar-btn:hover::after {
   outline: 2px solid rgba(0, 0, 0, 0.8);
-  background: center 50% / 26px no-repeat url(../../../images/pencil.svg) rgba(0, 0, 0, 0.8);
+  background: center 50% / 26px no-repeat url(../../../images/pencil.svg)
+    rgba(0, 0, 0, 0.8);
 }
-
-

@@ -1,12 +1,12 @@
-.menu__title{
-    margin:0 10px 0 0;
-    font-size: 0.875rem;
+.menu__title {
+  margin: 0 10px 0 0;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 424px) {
-    .menu__title{
-        margin:25px 0 18px;
-        font-size: 1.125rem;
-        line-height: 22px;
-    }
+  .menu__title {
+    margin: 25px 0 18px;
+    font-size: 1.125rem;
+    line-height: 22px;
+  }
 }

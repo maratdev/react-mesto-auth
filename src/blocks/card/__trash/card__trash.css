@@ -1,4 +1,4 @@
-.card__trash{
+.card__trash {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -12,7 +12,6 @@
   transition: opacity 0.5s ease;
 }
 
-.card__trash:hover{
+.card__trash:hover {
   opacity: 0.6;
 }
-

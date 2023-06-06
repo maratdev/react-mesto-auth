@@ -1,20 +1,20 @@
-.login__input{
-    font-size: 0.875rem;
-    color: #ccc;
-    border: 0;
-    background-color: transparent;
-    border-bottom: 2px solid rgba(204, 204, 204, 1);
-    padding-bottom: 13px;
-    margin-bottom: 30px;
-    outline: none;
+.login__input {
+  font-size: 0.875rem;
+  color: #ccc;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(204, 204, 204, 1);
+  padding-bottom: 13px;
+  margin-bottom: 30px;
+  outline: none;
 }
 
 .login__input::placeholder {
-    font-size: 0.875rem;
-    color: #ccc;
-    opacity: 1; /* Firefox */
+  font-size: 0.875rem;
+  color: #ccc;
+  opacity: 1; /* Firefox */
 }
 
-.login__input:nth-last-child(2){
-    margin-bottom: 0;
+.login__input:nth-last-child(2) {
+  margin-bottom: 0;
 }

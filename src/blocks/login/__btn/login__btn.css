@@ -1,18 +1,17 @@
-.login__btn{
-    width: 100%;
-    padding: 16px 0;
-    font-size: 1.125rem;
-    cursor: pointer;
-    transition: opacity 0.5s ease;
+.login__btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 }
 
-.login__btn:hover{
-    opacity: 0.8;
+.login__btn:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 425px) {
-    .login__btn{
-        font-size: 1rem;
-    }
+  .login__btn {
+    font-size: 1rem;
+  }
 }
-

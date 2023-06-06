@@ -1,4 +1,4 @@
-.profile__edit-btn{
+.profile__edit-btn {
   box-sizing: border-box;
   align-self: center;
   width: 24px;
@@ -11,14 +11,12 @@
   outline: none;
 }
 
-
-.profile__edit-btn:hover{
+.profile__edit-btn:hover {
   opacity: 0.6;
 }
 
-
 @media (max-width: 375px) {
-  .profile__edit-btn{
+  .profile__edit-btn {
     width: 18px;
     height: 18px;
     background-size: 8px 8px;

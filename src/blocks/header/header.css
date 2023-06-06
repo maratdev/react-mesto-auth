@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,19 +9,14 @@
 }
 
 @media (max-width: 991px) {
-  .header{
+  .header {
     max-width: calc(100% - 27px * 2);
   }
 }
 
 @media (max-width: 768px) {
-  .header{
+  .header {
     max-width: 100%;
     padding: 0 27px 31px;
   }
 }
-
-
-
-
-
