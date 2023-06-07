@@ -38,10 +38,8 @@ function App() {
   const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
 
   // открытие попап карточки об успешной регистрации
-  const [isInfoTooltip, setInfoTooltip] = useState(false); //+
-
+  const [isInfoTooltip, setInfoTooltip] = useState(false);
   const [tooltip, setTooltip] = useState({ image: "", message: "" });
-
   const navigate = useNavigate();
 
   // данные пользователя email и password с сервера

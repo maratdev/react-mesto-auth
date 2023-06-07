@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import AuthForm from "../AuthForm";
 
 export default function Register({ handleRegisterUser }) {
   const [formValue, setFormValue] = useState({
@@ -26,46 +26,14 @@ export default function Register({ handleRegisterUser }) {
   }
 
   return (
-    <main>
-      <section className="login">
-        <h2 className="login__title">Регистрация</h2>
-        <form onSubmit={handleSubmit} className="login__form">
-          <input
-            className="login__input"
-            placeholder="Email"
-            type="email"
-            name="email"
-            value={formValue.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            className="login__input"
-            placeholder="Пароль"
-            type="password"
-            name="password"
-            value={formValue.password}
-            onChange={handleChange}
-            minLength={4}
-            required
-          />
-          <div className="login__form-wrap">
-            <button
-              type="submit"
-              onSubmit={handleSubmit}
-              className="login__btn"
-            >
-              Зарегистрироваться
-            </button>
-            <p className="login__subtitle">
-              Уже зарегистрированы?{" "}
-              <Link to="/signin" className="login__link">
-                Войти
-              </Link>
-            </p>
-          </div>
-        </form>
-      </section>
-    </main>
+    <AuthForm
+      title="Регистрация"
+      titleBtn="Зарегистрироваться"
+      titleFormFooter="Уже зарегистрированы?"
+      handleSubmit={handleSubmit}
+      formValue={formValue}
+      handleChange={handleChange}
+      loginLink={true}
+    />
   );
 }

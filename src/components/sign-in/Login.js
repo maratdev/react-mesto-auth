@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AuthForm from "../AuthForm";
 
 export default function Login({ handleAuthorizeUser }) {
   const [formValue, setFormValue] = useState({
@@ -25,40 +26,13 @@ export default function Login({ handleAuthorizeUser }) {
   }
 
   return (
-    <main>
-      <section className="login">
-        <h2 className="login__title">Вход</h2>
-        <form className="login__form" onSubmit={handleSubmit}>
-          <input
-            className="login__input"
-            placeholder="Email"
-            type="email"
-            name="email"
-            value={formValue.email || ""}
-            onChange={handleChange}
-            required
-          />
-          <input
-            className="login__input"
-            placeholder="Пароль"
-            type="password"
-            name="password"
-            value={formValue.password || ""}
-            onChange={handleChange}
-            required
-            autoComplete="on"
-          />
-          <div className="login__form-wrap">
-            <button
-              type="submit"
-              className="login__btn"
-              onSubmit={handleSubmit}
-            >
-              Войти
-            </button>
-          </div>
-        </form>
-      </section>
-    </main>
+    <AuthForm
+      title="Вход"
+      titleBtn="Войти"
+      handleSubmit={handleSubmit}
+      formValue={formValue}
+      handleChange={handleChange}
+      loginLink={false}
+    />
   );
 }
