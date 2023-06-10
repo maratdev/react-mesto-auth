@@ -55,13 +55,7 @@ function App() {
   // рендер текста для кнопкок формы после нажатия на сабмит
   const [isLoading, setIsLoading] = useState(false);
 
-  const handlePopup =
-    isEditProfilePopupOpen ||
-    isAddCardPopupOpen ||
-    isEditAvatarPopupOpen ||
-    isImagePopupOpen ||
-    isConfirmDelCardPopupOpen ||
-    isInfoTooltip;
+
 
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false);
@@ -72,29 +66,7 @@ function App() {
     setInfoTooltip(false);
   }
 
-  // ----------------------------------------------------Попап закрытие по ESC и оверлею
-  useEffect(() => {
-    function closeByEscape(evt) {
-      if (evt.key === "Escape") {
-        closeAllPopups();
-      }
-    }
-    const handleOverlay = (evt) => {
-      if (evt.target.classList.contains("popup_opened")) {
-        closeAllPopups();
-      }
-    };
 
-    if (handlePopup) {
-      // навешиваем только при открытии
-      document.addEventListener("keydown", closeByEscape);
-      document.addEventListener("mousedown", handleOverlay);
-      return () => {
-        document.removeEventListener("keydown", closeByEscape);
-        document.removeEventListener("mousedown", handleOverlay);
-      };
-    }
-  }, [handlePopup]);
 
   // Инициализация User info
   useEffect(() => {

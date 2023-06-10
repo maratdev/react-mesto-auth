@@ -98,10 +98,6 @@ F
 src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 H
 src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
-L
-src/components/ImagePopup.js,7\9\79d905f5b01299c82976993965948d3fde23cef2
-N
-src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
 H
 src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 Q
@@ -110,3 +106,9 @@ M
 src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+J
+src/blocks/login/login.css,9\3\938bd89551a19465e036a6e850eda7f808e0b524
+R
+"src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
+T
+$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
