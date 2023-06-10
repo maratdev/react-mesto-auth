@@ -1,5 +1,4 @@
 import Popup from "./Popup";
-
 export default function PopupWithForm({
   isOpen,
   onClose,

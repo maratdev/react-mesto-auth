@@ -13,8 +13,12 @@ const Popup = ({ isOpen, name, onClose, children, onImgClass }) => {
     };
 
     document.addEventListener("keydown", closeByEscape);
+    document.addEventListener("mousedown", handleOverlay);
     // обязательно удаляем обработчик в `clean-up` функции
-    return () => document.removeEventListener("keydown", closeByEscape);
+    return () => {
+      document.removeEventListener("keydown", closeByEscape);
+      document.removeEventListener("mousedown", handleOverlay);
+    };
     // обязательно следим за `isOpen`, чтобы срабатывало только при открытии, а не всегда
   }, [isOpen, onClose]);
 

@@ -67,8 +67,6 @@ K
 src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
 R
 "src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
-A
-src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
 <
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 U
@@ -88,8 +86,6 @@ F
 .prettierignore,b\6\b69d8408b6c89ae66e712f0e6af68848291cfdfb
 9
 	.eslintrc,4\b\4be5f5e3cea171c304090be92469b2f2cb51039a
-@
-src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
 I
 src/components/NoFound.js,9\7\97ccb4df49e0229c56a019a18b75ca5cd2accd45
 U
@@ -102,8 +98,6 @@ H
 src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 Q
 !src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
-M
-src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 J

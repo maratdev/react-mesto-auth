@@ -181,7 +181,7 @@ function App() {
           setLoggedIn(true);
           setUserData({ email: data.email });
         })
-        .catch((err) => console.log(err));
+        .catch((error) => console.log(error));
     }
   }
 
@@ -191,33 +191,26 @@ function App() {
 
 
   // ---------------------------------------------------------> Регистрация пользователя
-  function handleRegisterUser(formValue) {
+
+function handleRegisterUser(formValue) {
     const { password, email } = formValue;
     auth
       .register(password, email)
       .then((res) => {
-        if (res.message || res.error) {
-          setInfoTooltip(true);
-          setTooltip({
-            image: false,
-            message: res.error || res.message,
-          });
-        } else {
-          setInfoTooltip(true);
-          setTooltip({
-            image: true,
-            message: "Вы успешно зарегистрировались!",
-          });
-          navigate("/signin", { replace: true });
-          setTimeout(closeAllPopups, 2000);
-        }
+        setInfoTooltip(true);
+        setTooltip({
+          image: true,
+          message: "Вы успешно зарегистрировались!",
+        });
+        navigate("/signin", { replace: true });
+        setTimeout(closeAllPopups, 2000);
       })
-      .catch((res) => {
+      .catch((error) => {
+        setInfoTooltip(true);
         setTooltip({
           image: false,
-          message: "Что-то пошло не так! Попробуйте ещё раз.",
+          message: "Пользователь с таким email уже зарегистрирован",
         });
-        console.log(res);
       });
   }
 
@@ -227,27 +220,21 @@ function App() {
     const { password, email } = formValue;
     auth
       .authorize(password, email)
-      .then((response) => response.json())
       .then((data) => {
         if (data.token) {
           setUserData({ email });
           localStorage.setItem("jwt", data.token);
           setLoggedIn(true);
           navigate("/app", { replace: true });
-        } else if (data.status === 401 || data.message) {
-          setInfoTooltip(true);
-          setTooltip({
-            image: false,
-            message: "Неверный адрес электронной почты или пароль!",
-          });
         }
       })
-      .catch((res) => {
+      .catch((error) => {
+        setInfoTooltip(true);
         setTooltip({
           image: false,
-          message: "Что-то пошло не так! Попробуйте ещё раз.",
+          message: "Неверный адрес электронной почты или пароль!",
         });
-        console.log(res);
+
       });
   }
 
