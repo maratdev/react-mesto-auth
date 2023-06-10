@@ -63,8 +63,6 @@ H
 src/components/NavBar.js,b\6\b6edac4d9c50fdac07a1123228e640195c65cb60
 R
 "src/contexts/CurrentUserContext.js,9\d\9d817d353d7ec3cdb04b3cbdee2ddf985277dbb3
-R
-"src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
 K
 src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
 <
@@ -92,8 +90,6 @@ U
 %src/blocks/card/__desc/card__desc.css,b\5\b5f8075b487b74c53c9a41392e1ff9a0d1bfffe9
 F
 src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
-Q
-!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 H
 src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
 <

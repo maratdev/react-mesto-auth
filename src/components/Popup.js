@@ -11,6 +11,12 @@ const Popup = ({ isOpen, name, onClose, children, onImgClass }) => {
         onClose();
       }
     };
+    // создаем обработчик оверлея
+    const handleOverlay = (evt) => {
+      if (evt.target.classList.contains("popup_opened")) {
+        onClose();
+      }
+    };
 
     document.addEventListener("keydown", closeByEscape);
     document.addEventListener("mousedown", handleOverlay);
@@ -22,18 +28,12 @@ const Popup = ({ isOpen, name, onClose, children, onImgClass }) => {
     // обязательно следим за `isOpen`, чтобы срабатывало только при открытии, а не всегда
   }, [isOpen, onClose]);
 
-  // создаем обработчик оверлея
-  const handleOverlay = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
+
 
   // внутри верстка обертки любого попапа с классом `popup` и добавлением `popup_opened`.
   return (
     <div
       className={`popup popup_${name} ${isOpen ? "popup_opened" : ""} `}
-      onClick={handleOverlay}
     >
       <div
         className={`${

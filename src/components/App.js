@@ -148,6 +148,8 @@ function App() {
       .then((userAvatar) => {
         setCurrentUser(userAvatar);
         closeAllPopups();
+
+
       })
       .catch(console.error)
       .finally(() => {

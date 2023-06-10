@@ -65,8 +65,6 @@ R
 "src/contexts/CurrentUserContext.js,9\d\9d817d353d7ec3cdb04b3cbdee2ddf985277dbb3
 K
 src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
-R
-"src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
 <
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 U
@@ -96,8 +94,6 @@ H
 src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
 H
 src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
-Q
-!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 J

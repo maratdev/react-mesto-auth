@@ -16,7 +16,9 @@ export default function AddCardPopup(props, isOpen) {
         name: values.card_name,
         link: values.card_src,
       });
+
     }
+
   }
   useEffect(() => {
     if (!isOpen) {
