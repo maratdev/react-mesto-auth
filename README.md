@@ -47,11 +47,11 @@
 
 **🧩 Брифы:**
 
-- [Figma 11-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
+- [Figma 12-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
 
 **📄 Чеклисты:**
 
-- [Чеклист 11-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-11.pdf)
+- [Чеклист 12-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-12.pdf)
 
 **🌐 Проект на GitHub Pages:**
 
@@ -64,7 +64,7 @@
 Склонировано из репозитория:
 
 ```bash
-git clone https://github.com/yandex-praktikum/mesto-react
+git clone https://maratdev.github.io/react-mesto-auth/
 ```
 
 👤 **Автор**

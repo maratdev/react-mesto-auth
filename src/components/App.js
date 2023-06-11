@@ -66,8 +66,6 @@ function App() {
     setInfoTooltip(false);
   }
 
-
-
   // Инициализация User info
   useEffect(() => {
     api
@@ -148,8 +146,6 @@ function App() {
       .then((userAvatar) => {
         setCurrentUser(userAvatar);
         closeAllPopups();
-
-
       })
       .catch(console.error)
       .finally(() => {
@@ -213,6 +209,7 @@ function handleRegisterUser(formValue) {
           image: false,
           message: "Пользователь с таким email уже зарегистрирован",
         });
+        console.log(error)
       });
   }
 
@@ -236,7 +233,7 @@ function handleRegisterUser(formValue) {
           image: false,
           message: "Неверный адрес электронной почты или пароль!",
         });
-
+        console.log(error)
       });
   }
 
