@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import AuthForm from "../AuthForm";
 
 export default function Login({ handleAuthorizeUser }) {
@@ -24,6 +24,7 @@ export default function Login({ handleAuthorizeUser }) {
       });
     }
   }
+
 
   return (
     <AuthForm

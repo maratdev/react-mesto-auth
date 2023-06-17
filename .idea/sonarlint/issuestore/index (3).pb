@@ -2,6 +2,8 @@
 D
 public/manifest.json,4\2\42e89cd2213b9d5dfae4f63522702c623170d792
 A
+webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
+A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 J
 src/vendor/fonts/fonts.css,9\5\95a76dd83fbb686bb9b8e84c044f9a5b2c486a21
@@ -53,28 +55,64 @@ Y
 )src/blocks/menu/__signin/menu__signin.css,d\b\dbfea839b0f5d7c04e3d0fd10a652bb1d5bb32ff
 Y
 )src/blocks/page/__header/page__header.css,9\d\9df92797c94770ae6855a22e0eac199dce55b5f0
+H
+src/components/NavBar.js,b\6\b6edac4d9c50fdac07a1123228e640195c65cb60
 R
 "src/contexts/CurrentUserContext.js,9\d\9d817d353d7ec3cdb04b3cbdee2ddf985277dbb3
+K
+src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
 U
 %src/blocks/card/__like/card__like.css,4\7\47c0c1653a8f4e0882736e1db0fa23aeb4f552f4
 H
 src/vendor/normalize.css,2\c\2c748555ade8b3e0437b7be20154b22b7e979951
 d
 4src/blocks/card/__like/_active/card__like_active.css,4\2\42189e27734a5886c4faec8a064bf084dd7bc6ae
+F
+src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
 @
 .prettierrc.json,1\e\1ee5d199ddbeaaa1717e65b449ac7a6f03bed689
+9
+	.eslintrc,4\b\4be5f5e3cea171c304090be92469b2f2cb51039a
 I
 src/components/NoFound.js,9\7\97ccb4df49e0229c56a019a18b75ca5cd2accd45
 U
 %src/blocks/card/__desc/card__desc.css,b\5\b5f8075b487b74c53c9a41392e1ff9a0d1bfffe9
+F
+src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 H
 src/components/Footer.js,b\d\bd22e369de6b4e7c909c8598869bb4c2e3bc1508
+H
+src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 J
 src/blocks/login/login.css,9\3\938bd89551a19465e036a6e850eda7f808e0b524
+R
+"src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
+T
+$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
+J
+src/components/AuthForm.js,6\8\68a684ccc708c2decada388cab9c41f6c55553ab
+R
+"src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
+O
+src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
 L
 src/components/ImagePopup.js,7\9\79d905f5b01299c82976993965948d3fde23cef2
+M
+src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
+@
+src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
+A
+src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
+G
+src/components/Popup.js,2\8\28f7aee75b1c1625ea0a4920dfa83747d60cf63c
+N
+src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
 R
 "src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
+O
+src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
+Q
+!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 =
 src/.nojekyll,2\e\2ea00743107a8a390ff56a7a3ae678b321fec5ba
 9
@@ -84,25 +122,3 @@ R
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ?
 .prettierignore,b\6\b69d8408b6c89ae66e712f0e6af68848291cfdfb
-O
-src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
-K
-src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
-G
-src/components/Popup.js,2\8\28f7aee75b1c1625ea0a4920dfa83747d60cf63c
-7
-.quokka,a\0\a084330b2f1b254af741a8441c39bcadf2e41ccf
-9
-	.eslintrc,4\b\4be5f5e3cea171c304090be92469b2f2cb51039a
-R
-"src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
-Q
-!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
-T
-$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-A
-src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
-F
-src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b

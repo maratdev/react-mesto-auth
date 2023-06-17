@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar({ loggedIn, userData, signOut, menuVisible }) {
+  const location = useLocation();
   return (
     <nav
       className={`menu ${!loggedIn ? "menu__signin" : ""} ${
@@ -22,30 +23,29 @@ export default function NavBar({ loggedIn, userData, signOut, menuVisible }) {
           </>
         )}
 
-        <Routes>
-          !loggedIn && (
-          <Route
-            path="signin"
-            element={
-              <li>
-                <NavLink to="/signup" className="menu__link">
-                  Регистрация
-                </NavLink>
-              </li>
-            }
-          />
-          <Route
-            path="signup"
-            element={
-              <li>
-                <NavLink to="/signin" className="menu__link">
-                  Войти
-                </NavLink>
-              </li>
-            }
-          />
+        {
+            !loggedIn && (
+              <>
+                {location.pathname === "/signin" && (
+                    <li>
+                    <Link to="/signup" className="menu__link">
+                      Регистрация
+                    </Link>
+                    </li>
+                )}
+                  <li>
+                    {location.pathname === "/signup" && (
+                        <Link to="/signin" className="menu__link">
+                          Войти
+                        </Link>
+                    )}
+                  </li>
+              </>
+
           )
-        </Routes>
+        }
+
+
       </ul>
     </nav>
   );

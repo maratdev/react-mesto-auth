@@ -19,7 +19,7 @@ export const getContent = (jwt) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${jwt}`,
     },
-  })
+  });
 };
 
 export const register = (password, email) => {

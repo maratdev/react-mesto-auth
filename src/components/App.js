@@ -19,6 +19,8 @@ import Register from "./sign-up/Register";
 import InfoTooltip from "./InfoTooltip";
 import * as auth from "../utils/auth";
 
+
+
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
@@ -54,8 +56,6 @@ function App() {
   const [cardId, setCardId] = useState("");
   // рендер текста для кнопкок формы после нажатия на сабмит
   const [isLoading, setIsLoading] = useState(false);
-
-
 
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false);
@@ -153,12 +153,14 @@ function App() {
       });
   }
 
+
   // Api---------------------------------------------------------> Добавление карточки
   function handleAddPlaceSubmit(inputValues) {
     setIsLoading(true);
     api
       .saveCardInfo(inputValues)
       .then((cardData) => {
+
         setCards([cardData, ...cards]);
         closeAllPopups();
       })
@@ -194,7 +196,7 @@ function handleRegisterUser(formValue) {
     const { password, email } = formValue;
     auth
       .register(password, email)
-      .then((res) => {
+      .then(() => {
         setInfoTooltip(true);
         setTooltip({
           image: true,
@@ -214,6 +216,7 @@ function handleRegisterUser(formValue) {
   }
 
   // ---------------------------------------------------------> Авторизация пользователя
+
 
   function handleAuthorizeUser(formValue) {
     const { password, email } = formValue;
@@ -236,6 +239,8 @@ function handleRegisterUser(formValue) {
         console.log(error)
       });
   }
+
+
 
   // ---------------------------------------------------------> Выход
 

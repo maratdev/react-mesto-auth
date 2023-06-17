@@ -1,6 +1,6 @@
 # 📝 Проект: Mesto
 
-### _**Проектная работа №12. Курс «Веб-разработчик» от Яндекс Практикум.**_
+### _**Проектная работа №13. Курс «Веб-разработчик» от Яндекс Практикум.**_
 
 ## ⚙️ Функционал:
 
@@ -38,6 +38,7 @@
 - [ReactJS](https://ru.legacy.reactjs.org/)
   - Реакт-хуки
   - React Router
+  - React Protected Router
 - Git
 - Figma
 - Webpack
@@ -47,11 +48,11 @@
 
 **🧩 Брифы:**
 
-- [Figma 12-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
+- [Figma 13-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
 
 **📄 Чеклисты:**
 
-- [Чеклист 12-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-12.pdf)
+- [Чеклист 13-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-12.pdf)
 
 **🌐 Проект на GitHub Pages:**
 
