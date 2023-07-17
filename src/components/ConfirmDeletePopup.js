@@ -12,11 +12,11 @@ function ConfirmDeletePopup(props) {
       submitTitle={props.isLoading ? "Сохраняем..." : "Да"}
       name="del-card"
       title="Вы уверены?"
-      elemClass="true"
+      elemClass //true
       isOpen={props.isOpen}
       onClose={props.onClose}
       onSubmit={handleSubmit}
-      isValid={true}
+      isValid //true
     ></PopupWithForm>
   );
 }

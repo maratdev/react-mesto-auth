@@ -178,7 +178,7 @@ function App() {
         .getContent(jwt)
         .then(({ data }) => {
           navigate("/app");
-          setLoggedIn(true);
+          setLoggedIn(!loggedIn);
           setUserData({ email: data.email });
         })
         .catch((error) => console.log(error));
@@ -192,8 +192,7 @@ function App() {
 
   // ---------------------------------------------------------> Регистрация пользователя
 
-function handleRegisterUser(formValue) {
-    const { password, email } = formValue;
+function handleRegisterUser({password, email}) {
     auth
       .register(password, email)
       .then(() => {
@@ -218,15 +217,14 @@ function handleRegisterUser(formValue) {
   // ---------------------------------------------------------> Авторизация пользователя
 
 
-  function handleAuthorizeUser(formValue) {
-    const { password, email } = formValue;
+  function handleAuthorizeUser({password, email}) {
     auth
       .authorize(password, email)
       .then((data) => {
         if (data.token) {
           setUserData({ email });
           localStorage.setItem("jwt", data.token);
-          setLoggedIn(true);
+          setLoggedIn(!loggedIn);
           navigate("/app", { replace: true });
         }
       })
@@ -248,7 +246,7 @@ function handleRegisterUser(formValue) {
     setUserData({ email: "" });
     localStorage.removeItem("jwt");
     navigate("/signin", { replace: true });
-    setLoggedIn(false);
+    setLoggedIn(!loggedIn);
   }
 
   return (

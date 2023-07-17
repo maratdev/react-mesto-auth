@@ -84,8 +84,6 @@ R
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ?
 .prettierignore,b\6\b69d8408b6c89ae66e712f0e6af68848291cfdfb
-O
-src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
 G
 src/components/Popup.js,2\8\28f7aee75b1c1625ea0a4920dfa83747d60cf63c
 K
@@ -94,8 +92,6 @@ K
 .quokka,a\0\a084330b2f1b254af741a8441c39bcadf2e41ccf
 9
 	.eslintrc,4\b\4be5f5e3cea171c304090be92469b2f2cb51039a
-T
-$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
 Q
 !src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 R
@@ -106,3 +102,33 @@ F
 src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 A
 src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
+@
+src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
+A
+webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
+M
+src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
+J
+src/components/AuthForm.js,6\8\68a684ccc708c2decada388cab9c41f6c55553ab
+R
+"src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
+F
+src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
+<
+src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+N
+src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
+O
+src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
+H
+src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
+H
+src/components/NavBar.js,b\6\b6edac4d9c50fdac07a1123228e640195c65cb60
+T
+$src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
+O
+src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+E
+src/components/App.js,0\5\053473e2f24e57d32f5be5bef4b8a7dd7f571c70
