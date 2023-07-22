@@ -15,19 +15,19 @@ class Api {
     return Promise.reject(`Ошибка ${res.status}`);
   }
 
-  getInitialCards() {
-    return this._request(this._baseUrl + "/cards", {
-      method: "GET",
-      headers: this._headers,
-    });
-  }
+  // getInitialCards() {
+  //   return this._request(this._baseUrl + "/cards", {
+  //     method: "GET",
+  //     headers: this._headers,
+  //   });
+  // }
 
-  getDataUser() {
-    return this._request(this._baseUrl + "/users/me", {
-      method: "GET",
-      headers: this._headers,
-    });
-  }
+  // getDataUser() {
+  //   return this._request(this._baseUrl + "/users/me", {
+  //     method: "GET",
+  //     headers: this._headers,
+  //   });
+  // }
 
   saveDataInfo(profileInfo) {
     //        console.log('API(profileInfo):' + JSON.stringify(profileInfo))
@@ -79,10 +79,11 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-64",
+//  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-64",
+  baseUrl: "http://localhost:5000",
   headers: {
-    authorization: "145c396a-49e7-4abb-9010-fec05cae083b",
-    "Content-Type": "application/json; character=UTF-8",
+    Accept: "application/json",
+    "Content-Type": "application/json",
   },
 });
 

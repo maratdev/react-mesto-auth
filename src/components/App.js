@@ -18,7 +18,7 @@ import Login from "./sign-in/Login";
 import Register from "./sign-up/Register";
 import InfoTooltip from "./InfoTooltip";
 import * as auth from "../utils/auth";
-import {logout} from "../utils/auth";
+import * as newApi from "../utils/newApi";
 
 
 
@@ -69,7 +69,7 @@ function App() {
 
   // Инициализация User info
   useEffect(() => {
-    api
+    newApi
       .getDataUser()
       .then((userData) => {
         setCurrentUser(userData);
@@ -79,10 +79,11 @@ function App() {
 
   // Инициализация Card
   useEffect(() => {
-    api
+    newApi
       .getInitialCards()
       .then((initialCards) => {
         setCards(initialCards);
+        console.log(initialCards)
       })
       .catch(console.error);
   }, []);
@@ -128,7 +129,7 @@ function App() {
   // Api---------------------------------------------------------> Изменение данных пользователя
   function handleUpdateUser(userData) {
     setIsLoading(true);
-    api
+    newApi
       .saveDataInfo(userData)
       .then((updateUser) => {
         setCurrentUser(updateUser);

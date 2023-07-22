@@ -123,8 +123,4 @@ $src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa26
 O
 src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
 <
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-<
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
-@
-src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
