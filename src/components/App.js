@@ -82,6 +82,7 @@ function App() {
     newApi
       .getInitialCards()
       .then((initialCards) => {
+          console.log(initialCards)
         setCards(initialCards);
         console.log(initialCards)
       })
@@ -109,7 +110,7 @@ function App() {
   // Api---------------------------------------------------------> Удаление карточки
   function handleCardDelete() {
     setIsLoading(true);
-    api
+    newApi
       .deleteCard(cardId)
       .then(() => {
         setCards(cards.filter((item) => item._id !== cardId));
@@ -143,7 +144,7 @@ function App() {
   // Api---------------------------------------------------------> Изменение аватара
   function handleUpdateAvatar(userData) {
     setIsLoading(true);
-    api
+      newApi
       .saveDataProfile(userData)
       .then((userAvatar) => {
         setCurrentUser(userAvatar);
@@ -159,7 +160,7 @@ function App() {
   // Api---------------------------------------------------------> Добавление карточки
   function handleAddPlaceSubmit(inputValues) {
     setIsLoading(true);
-    api
+    newApi
       .saveCardInfo(inputValues)
       .then((cardData) => {
 

@@ -45,7 +45,7 @@ export default function Main(props) {
                 key={card._id}
                 name={card.name}
                 link={card.link}
-                ownerId={card.owner._id}
+                ownerId={card.owner}
                 likes={card.likes}
                 onCardLike={props.onCardLike}
                 cardId={card._id}

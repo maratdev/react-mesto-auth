@@ -29,17 +29,17 @@ class Api {
   //   });
   // }
 
-  saveDataInfo(profileInfo) {
-    //        console.log('API(profileInfo):' + JSON.stringify(profileInfo))
-    return this._request(this._baseUrl + "/users/me", {
-      headers: this._headers,
-      method: "PATCH",
-      body: JSON.stringify({
-        name: profileInfo.name,
-        about: profileInfo.about,
-      }),
-    });
-  }
+  // saveDataInfo(profileInfo) {
+  //   //        console.log('API(profileInfo):' + JSON.stringify(profileInfo))
+  //   return this._request(this._baseUrl + "/users/me", {
+  //     headers: this._headers,
+  //     method: "PATCH",
+  //     body: JSON.stringify({
+  //       name: profileInfo.name,
+  //       about: profileInfo.about,
+  //     }),
+  //   });
+  // }
 
   saveCardInfo(cardInfo) {
     //    console.log('API(cardInfo):' + JSON.stringify(cardInfo))
@@ -69,13 +69,7 @@ class Api {
     });
   }
 
-  saveDataProfile(profileAvatar) {
-    return this._request(this._baseUrl + "/users/me/avatar", {
-      headers: this._headers,
-      method: "PATCH",
-      body: JSON.stringify({ avatar: profileAvatar.avatar }),
-    });
-  }
+
 }
 
 const api = new Api({

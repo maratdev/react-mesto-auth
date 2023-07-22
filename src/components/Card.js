@@ -7,7 +7,6 @@ export default function Card(card) {
   const cardElementButtonClassName = `card__like ${
     isLiked && "card__like_active"
   }`;
-
   function handleClick() {
     card.onCardClick({ name: card.name, link: card.link });
   }

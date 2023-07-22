@@ -98,8 +98,6 @@ R
 "src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-F
-src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 A
 webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
 M
@@ -108,8 +106,6 @@ J
 src/components/AuthForm.js,6\8\68a684ccc708c2decada388cab9c41f6c55553ab
 R
 "src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
-F
-src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
 N
 src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
 O

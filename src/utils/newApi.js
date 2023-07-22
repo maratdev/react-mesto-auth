@@ -13,7 +13,7 @@ function _getResponseData(res) {
 }
 
 
-// Api---------------------------------------------------------> Users
+// Api------------------------------------------------------------------> Users
 export const getDataUser = () => {
     return _request(BASE_URL + "users/me", {
         method: "GET",
@@ -26,7 +26,7 @@ export const getDataUser = () => {
 };
 
 export const saveDataInfo = (profileInfo) => {
-    return _request(BASE_URL+ "users/me", {
+    return _request(BASE_URL + "users/me", {
         method: "PATCH",
         credentials: 'include',
         headers: {
@@ -40,23 +40,23 @@ export const saveDataInfo = (profileInfo) => {
     });
 }
 
+export const saveDataProfile = (profileAvatar) => {
+    return _request(BASE_URL + "users/me/avatar", {
+        method: "PATCH",
+        credentials: 'include',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ avatar: profileAvatar.avatar }),
+    });
+}
 
 
 
+// Api------------------------------------------------------------------> Card
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Инициализация Card
 export const getInitialCards = () => {
     return _request(BASE_URL + "cards", {
         method: "GET",
@@ -68,3 +68,30 @@ export const getInitialCards = () => {
     });
 };
 
+// Добавление карточки
+export const saveCardInfo = (cardInfo) => {
+    return _request(BASE_URL + "cards", {
+        method: "POST",
+        credentials: 'include',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name: cardInfo.name,
+            link: cardInfo.link,
+        }),
+    });
+}
+
+// Удаление карточки
+export const deleteCard = (cardId) =>{
+    return _request(BASE_URL + `cards/${cardId}`, {
+        method: "DELETE",
+        credentials: 'include',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+    });
+}
