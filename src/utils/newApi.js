@@ -95,3 +95,15 @@ export const deleteCard = (cardId) =>{
         },
     });
 }
+
+export const changeLikeCardStatus = (cardId, isLiked) => {
+    const method = isLiked ? "PUT" : "DELETE";
+    return _request(BASE_URL + `cards/${cardId}/likes`, {
+        method: method,
+        credentials: 'include',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+    });
+}

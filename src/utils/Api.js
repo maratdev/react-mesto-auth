@@ -15,51 +15,6 @@ class Api {
     return Promise.reject(`Ошибка ${res.status}`);
   }
 
-  // getInitialCards() {
-  //   return this._request(this._baseUrl + "/cards", {
-  //     method: "GET",
-  //     headers: this._headers,
-  //   });
-  // }
-
-  // getDataUser() {
-  //   return this._request(this._baseUrl + "/users/me", {
-  //     method: "GET",
-  //     headers: this._headers,
-  //   });
-  // }
-
-  // saveDataInfo(profileInfo) {
-  //   //        console.log('API(profileInfo):' + JSON.stringify(profileInfo))
-  //   return this._request(this._baseUrl + "/users/me", {
-  //     headers: this._headers,
-  //     method: "PATCH",
-  //     body: JSON.stringify({
-  //       name: profileInfo.name,
-  //       about: profileInfo.about,
-  //     }),
-  //   });
-  // }
-
-  saveCardInfo(cardInfo) {
-    //    console.log('API(cardInfo):' + JSON.stringify(cardInfo))
-    return this._request(this._baseUrl + "/cards", {
-      headers: this._headers,
-      method: "POST",
-      body: JSON.stringify({
-        name: cardInfo.name,
-        link: cardInfo.link,
-      }),
-    });
-  }
-
-  deleteCard(cardId) {
-    // console.log('API(cardId):' + cardId)
-    return this._request(this._baseUrl + `/cards/${cardId}`, {
-      headers: this._headers,
-      method: "DELETE",
-    });
-  }
 
   changeLikeCardStatus(cardId, isLiked) {
     const method = isLiked ? "PUT" : "DELETE";

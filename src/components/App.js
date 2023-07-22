@@ -82,9 +82,8 @@ function App() {
     newApi
       .getInitialCards()
       .then((initialCards) => {
-          console.log(initialCards)
+        //  console.log(initialCards)
         setCards(initialCards);
-        console.log(initialCards)
       })
       .catch(console.error);
   }, []);
@@ -97,10 +96,11 @@ function App() {
 
   // Api---------------------------------------------------------> Like
   function handleCardLike(cardId, likes) {
-    const isLiked = likes.some((i) => i._id === currentUser._id);
-    api
+    const isLiked = likes?.some((i) => i === currentUser._id);
+    newApi
       .changeLikeCardStatus(cardId, !isLiked)
       .then((newCard) => {
+       // console.log(newCard)
         setCards((state) =>
           state.map((element) => (element._id === cardId ? newCard : element))
         );
