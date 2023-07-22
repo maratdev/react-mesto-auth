@@ -98,22 +98,16 @@ Q
 !src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-A
-src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
 F
 src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 A
 webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
-@
-src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
 M
 src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
 J
 src/components/AuthForm.js,6\8\68a684ccc708c2decada388cab9c41f6c55553ab
 R
 "src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
-<
-src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 F
 src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
 N
@@ -130,5 +124,7 @@ H
 src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-E
-src/components/App.js,0\5\053473e2f24e57d32f5be5bef4b8a7dd7f571c70
+<
+src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+@
+src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f

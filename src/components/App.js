@@ -18,6 +18,7 @@ import Login from "./sign-in/Login";
 import Register from "./sign-up/Register";
 import InfoTooltip from "./InfoTooltip";
 import * as auth from "../utils/auth";
+import {logout} from "../utils/auth";
 
 
 
@@ -172,14 +173,15 @@ function App() {
 
   // ---------------------------------------------------------> Аутинфикация пользоватедя
   function tokenCheck() {
-    const jwt = localStorage.getItem("jwt");
+    const results = document.cookie.match(/jwt=(.+?)(;|$)/);
+    const jwt  = results ? results[0] : 'null';
     if (jwt) {
       auth
-        .getContent(jwt)
-        .then(({ data }) => {
+        .getContent()
+        .then(( data ) => {
           navigate("/app");
           setLoggedIn(!loggedIn);
-          setUserData({ email: data.email });
+         setUserData({ email: data.email });
         })
         .catch((error) => console.log(error));
     }
@@ -223,7 +225,6 @@ function handleRegisterUser({password, email}) {
       .then((data) => {
         if (data.token) {
           setUserData({ email });
-          localStorage.setItem("jwt", data.token);
           setLoggedIn(!loggedIn);
           navigate("/app", { replace: true });
         }
@@ -243,10 +244,15 @@ function handleRegisterUser({password, email}) {
   // ---------------------------------------------------------> Выход
 
   function signOut() {
-    setUserData({ email: "" });
-    localStorage.removeItem("jwt");
-    navigate("/signin", { replace: true });
-    setLoggedIn(!loggedIn);
+    auth
+        .logout()
+        .then((data) => {
+          console.log(data)
+          navigate("/signin", { replace: true });
+          setLoggedIn(!loggedIn);
+          setUserData({ email: "" });
+        })
+        .catch((error) => console.log(error));
   }
 
   return (

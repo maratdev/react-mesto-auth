@@ -101,10 +101,6 @@ R
 F
 src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
 A
-src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
-@
-src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
-A
 webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
 M
 src/components/InfoTooltip.js,0\c\0cf7dbaf1ad04e4ed5483c644a176519eb0dfff8
@@ -114,8 +110,6 @@ R
 "src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
 F
 src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
-<
-src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 N
 src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
 O
@@ -130,5 +124,7 @@ O
 src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-E
-src/components/App.js,0\5\053473e2f24e57d32f5be5bef4b8a7dd7f571c70
+<
+src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+@
+src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
