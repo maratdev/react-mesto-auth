@@ -116,7 +116,5 @@ T
 $src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
 O
 src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
-H
-src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 <
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d

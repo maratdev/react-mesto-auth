@@ -12,20 +12,10 @@ function _getResponseData(res) {
   return Promise.reject(`Ошибка ${res.status}`);
 }
 
-export const getContent = () => {
-  return _request(BASE_URL + "users/me", {
-    method: "GET",
-    credentials: 'include',
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
-};
-
 export const register = (password, email) => {
   return _request(BASE_URL + "signup",{
     method: "POST",
+    credentials: 'include',
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -56,3 +46,15 @@ export const logout = () => {
     },
   });
 };
+
+export const checkToken = () => {
+    return _request(BASE_URL + "users/me", {
+      method: "GET",
+      credentials: 'include',
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+  });
+};
+

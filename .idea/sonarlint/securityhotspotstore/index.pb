@@ -111,8 +111,6 @@ N
 O
 src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
 H
-src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
-H
 src/components/NavBar.js,b\6\b6edac4d9c50fdac07a1123228e640195c65cb60
 T
 $src/components/ConfirmDeletePopup.js,b\d\bd1e7860661419de179fcc072a39eb806aa261d4
