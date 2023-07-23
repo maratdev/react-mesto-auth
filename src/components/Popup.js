@@ -6,8 +6,8 @@ const Popup = ({ isOpen, name, onClose, children, onImgClass }) => {
     // ограничиваем навешивание обработчика: если не открыт, то не нужно навешивать
     if (!isOpen) return;
     // объявляем внутри `useEffect` функцию, чтобы она не теряла ссылку при перерисовке компонента
-    const closeByEscape = (e) => {
-      if (e.key === "Escape") {
+    const closeByEscape = (evt) => {
+      if (evt.key === "Escape") {
         onClose();
       }
     };

@@ -16,16 +16,17 @@ export default function AddCardPopup(props, isOpen) {
         name: values.card_name,
         link: values.card_src,
       });
-
     }
-
+    evt.target.reset();
   }
+
   useEffect(() => {
-    if (!isOpen) {
+    if (!props.isOpen) {
       resetForm();
     }
-  }, [isOpen]);
+  }, [props.onClose]);
 
+  //console.log(values.card_name)
   return (
     <PopupWithForm
       submitTitle={props.isLoading ? "Добавляем..." : "Добавить"}

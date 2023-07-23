@@ -21,10 +21,10 @@ export default function EditAvatarPopup(props, isOpen) {
   }
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!props.isOpen) {
       resetForm();
     }
-  }, [isOpen]);
+  }, [props.onClose]);
 
   return (
     <PopupWithForm

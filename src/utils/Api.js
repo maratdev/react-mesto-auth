@@ -1,6 +1,6 @@
 const _api = {
-  //BASE_URL = "https://api.nomoredomains.xyz/";
-  BASE_URL: "http://localhost:5000/",
+  //BASE_URL: "http://localhost:5000/",
+  BASE_URL: "https://api.nomoredomains.xyz/",
   HEADERS: {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -19,6 +19,7 @@ function _getResponseData(res) {
 }
 
 // Api------------------------------------------------------------------> Users
+// Инициализация Users
 export const getDataUser = () => {
   return _request(_api.BASE_URL + "users/me", {
     method: "GET",
@@ -26,7 +27,7 @@ export const getDataUser = () => {
     headers: _api.HEADERS,
   });
 };
-
+// Изменение данных User
 export const saveDataInfo = (profileInfo) => {
   return _request(_api.BASE_URL + "users/me", {
     method: "PATCH",
@@ -38,8 +39,8 @@ export const saveDataInfo = (profileInfo) => {
     }),
   });
 };
-
-export const saveDataProfile = (profileAvatar) => {
+// Изменение аватара User
+export const saveProfileAvatar = (profileAvatar) => {
   return _request(_api.BASE_URL + "users/me/avatar", {
     method: "PATCH",
     credentials: "include",
@@ -81,6 +82,7 @@ export const deleteCard = (cardId) => {
   });
 };
 
+// Удаление/Добавление лайка
 export const changeLikeCardStatus = (cardId, isLiked) => {
   const method = isLiked ? "PUT" : "DELETE";
   return _request(_api.BASE_URL + `cards/${cardId}/likes`, {

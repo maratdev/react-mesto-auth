@@ -73,8 +73,6 @@ J
 src/blocks/login/login.css,9\3\938bd89551a19465e036a6e850eda7f808e0b524
 L
 src/components/ImagePopup.js,7\9\79d905f5b01299c82976993965948d3fde23cef2
-R
-"src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
 =
 src/.nojekyll,2\e\2ea00743107a8a390ff56a7a3ae678b321fec5ba
 9
@@ -86,16 +84,10 @@ R
 .prettierignore,b\6\b69d8408b6c89ae66e712f0e6af68848291cfdfb
 K
 src/hooks/ProtectedRoute.js,a\5\a55766de472a42c9f26c34885105bd5666dceba9
-G
-src/components/Popup.js,2\8\28f7aee75b1c1625ea0a4920dfa83747d60cf63c
 7
 .quokka,a\0\a084330b2f1b254af741a8441c39bcadf2e41ccf
 9
 	.eslintrc,4\b\4be5f5e3cea171c304090be92469b2f2cb51039a
-R
-"src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
-Q
-!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
@@ -106,10 +98,6 @@ J
 src/components/AuthForm.js,6\8\68a684ccc708c2decada388cab9c41f6c55553ab
 R
 "src/components/sign-up/Register.js,0\9\0911dc22c9d203729783877d5a6558bb4859ebe0
-N
-src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
-O
-src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
 H
 src/components/NavBar.js,b\6\b6edac4d9c50fdac07a1123228e640195c65cb60
 T
@@ -118,3 +106,9 @@ O
 src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
 <
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+H
+src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
+F
+src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1

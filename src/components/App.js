@@ -133,7 +133,7 @@ function App() {
   // Api---------------------------------------------------------> Изменение аватара
   function handleUpdateAvatar(userData) {
     setIsLoading(true);
-    Api.saveDataProfile(userData)
+    Api.saveProfileAvatar(userData)
       .then((userAvatar) => {
         setCurrentUser(userAvatar);
         closeAllPopups();
@@ -158,7 +158,6 @@ function App() {
       });
   }
 
-  console.log(loggedIn);
   // ---------------------------------------------------------> Аутинфикация пользователя
   useEffect(() => {
     auth
@@ -170,9 +169,7 @@ function App() {
           setLoggedIn(true);
         }
       })
-      .catch((err) => {
-        console.log("Ошибка проверки токена", err);
-      });
+      .catch(console.error);
   }, [loggedIn]);
 
   useEffect(() => {
