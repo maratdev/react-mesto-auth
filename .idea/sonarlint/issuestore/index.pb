@@ -77,9 +77,6 @@ L
 src/.nojekyll,2\e\2ea00743107a8a390ff56a7a3ae678b321fec5ba
 9
 	.nojekyll,0\3\03b2fec89efb8ce6c88d3bf27889148bc75fa6d3
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ?
 .prettierignore,b\6\b69d8408b6c89ae66e712f0e6af68848291cfdfb
 K
@@ -112,3 +109,16 @@ H
 src/components/Header.js,e\5\e51f5a0439fa2d716c21a933fa2f850a0e5605c8
 F
 src/components/Main.js,1\8\1843f73c4aa3116ec540c905821cc57640c8b2f1
+F
+src/components/Card.js,c\4\c43e8601c6fcd70c918e0e623d4a4201da3f2b0b
+O
+src/components/PopupWithForm.js,2\0\208630639ca6460d006daea0c56bd0b41cb214bb
+G
+src/components/Popup.js,2\8\28f7aee75b1c1625ea0a4920dfa83747d60cf63c
+R
+"src/hooks/useFormWithValidation.js,d\8\d860d07ad3dc6eaae2ca9f0fcdd359d57fa84928
+R
+"src/components/EditProfilePopup.js,1\6\167d1b49e66beeac2f6da8c1490191736c67218b
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

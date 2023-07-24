@@ -1,5 +1,5 @@
 const _api = {
- // BASE_URL: "http://localhost:5000/",
+  //BASE_URL: "http://localhost:5000/",
   BASE_URL: "https://api.nomoredomains.xyz/",
   HEADERS: {
     Accept: "application/json",
