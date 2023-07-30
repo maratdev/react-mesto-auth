@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 import useFormWithValidation from "../hooks/useFormWithValidation";
 
-export default function EditAvatarPopup(props, isOpen) {
+export default function EditAvatarPopup(props) {
   const ref = useRef();
 
   const { values, handleChange, errors, isValid, resetForm } =
@@ -24,7 +24,7 @@ export default function EditAvatarPopup(props, isOpen) {
     if (!props.isOpen) {
       resetForm();
     }
-  }, [props.onClose]);
+  }, [props.onClose, props.isOpen, resetForm]);
 
   return (
     <PopupWithForm
