@@ -120,3 +120,15 @@ R
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+N
+src/components/AddCardPopup.js,c\e\ce466d62d7b1bd55f8d12aeb6969bcac682b1814
+O
+src/components/sign-in/Login.js,8\7\87a9c3d80df9bbdafca38e114055b6f6acefad29
+Q
+!src/components/EditAvatarPopup.js,b\f\bf515efd9cd34902b3f8a81f61fcecd8450d912e
+@
+src/utils/Api.js,d\c\dc3c344264d40d0ba71f9cc4fc056de418b7ae0f
+A
+src/utils/auth.js,2\9\29b0fa21d661adfca301a9fd66223759c6d6c836
+E
+src/components/App.js,0\5\053473e2f24e57d32f5be5bef4b8a7dd7f571c70

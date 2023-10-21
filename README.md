@@ -46,13 +46,17 @@
 
 ---
 
+**🛠️ Бэкенд:**
+
+- [api.nomoredomains.xyz](https://api.nomoredomains.xyz/)
+
 **🧩 Брифы:**
 
-- [Figma 13-го спринта](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
+- [Figma](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
 
 **📄 Чеклисты:**
 
-- [Чеклист 13-го спринта](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-12.pdf)
+- [Чеклист](https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist-12.pdf)
 
 **🌐 Проект на GitHub Pages:**
 

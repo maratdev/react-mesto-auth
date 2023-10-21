@@ -164,16 +164,16 @@ function App() {
       .checkToken()
       .then((res) => {
         if (res.email) {
-          loadUserAndCards();
           setUserData({ email: res.email });
           setLoggedIn(true);
         }
       })
       .catch(console.error);
-  }, [loggedIn]);
+  }, []);
 
   useEffect(() => {
     if (loggedIn) {
+      loadUserAndCards();
       navigate("/app", { replace: true });
     }
   }, [loggedIn]);
@@ -210,7 +210,6 @@ function App() {
       .then(() => {
         auth.checkToken().then((res) => {
           if (res.email) {
-            loadUserAndCards();
             setUserData({ email });
             setLoggedIn(true);
           }
