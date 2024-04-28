@@ -43,7 +43,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://maratdev.github.io/react-mesto-auth/",
+  "homepage": "https://maratdev.github.io/react-mesto-auth",
   "devDependencies": {
     "eslint": "8.22.0",
     "gh-pages": "^5.0.0",
