@@ -1,6 +1,6 @@
 const _api = {
-  //BASE_URL: "http://localhost:5000/",
-  BASE_URL: "https://api.nomoredomains.xyz/",
+ BASE_URL: "http://api.voredev.ru/",
+  //BASE_URL: "http://localhost:3001/",
   HEADERS: {
     Accept: "application/json",
     "Content-Type": "application/json",

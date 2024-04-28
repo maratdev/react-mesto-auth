@@ -1,6 +1,6 @@
 const _api = {
-  //BASE_URL: "http://localhost:5000/",
-  BASE_URL: "https://api.nomoredomains.xyz/",
+  BASE_URL: "http://api.voredev.ru/",
+  //BASE_URL: "http://localhost:3001/",
   HEADERS: {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -19,36 +19,35 @@ function _getResponseData(res) {
 }
 
 export const register = (password, email) => {
-  return _request(_api.BASE_URL + "signup",{
+  return _request(_api.BASE_URL + "signup", {
     method: "POST",
-    credentials: 'include',
+    credentials: "include",
     headers: _api.HEADERS,
     body: JSON.stringify({ password, email }),
-  })
+  });
 };
 
 export const authorize = (password, email) => {
   return _request(_api.BASE_URL + "signin", {
     method: "POST",
-    credentials: 'include',
+    credentials: "include",
     headers: _api.HEADERS,
-   body: JSON.stringify({ password, email }),
-  })
+    body: JSON.stringify({ password, email }),
+  });
 };
 
 export const logout = () => {
   return _request(_api.BASE_URL + "signout", {
     method: "GET",
-    credentials: 'include',
+    credentials: "include",
     headers: _api.HEADERS,
   });
 };
 
 export const checkToken = () => {
-    return _request(_api.BASE_URL + "users/me", {
-      method: "GET",
-      credentials: 'include',
-      headers: _api.HEADERS,
+  return _request(_api.BASE_URL + "users/me", {
+    method: "GET",
+    credentials: "include",
+    headers: _api.HEADERS,
   });
 };
-
