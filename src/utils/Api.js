@@ -1,5 +1,5 @@
 const _api = {
- BASE_URL: "http://api.voredev.ru/",
+ BASE_URL: "https://api.voredev.ru/",
   //BASE_URL: "http://localhost:3001/",
   HEADERS: {
     Accept: "application/json",
